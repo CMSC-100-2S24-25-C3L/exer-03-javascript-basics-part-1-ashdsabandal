@@ -40,7 +40,28 @@ function validatePassword(pass1, pass2) {
 
 
     return true;
-  }
+}
 
-console.log(validatePassword("aEZl1234", "aEZl1234"));
+function reversePassword(pass) {
+    let reversed = ""; 
+    for (let i = pass.length - 1; i >= 0; i--) {
+        reversed += pass[i];
+        
+    }
 
+    return reversed;
+}
+
+function storePassword(name, pass1, pass2) {
+    let password = pass1;
+
+    if (validatePassword(pass1, pass2)) {
+        password = reversePassword(pass1);
+    }
+
+    
+
+    return car = {name:name, newpassword:password};
+}
+
+console.log(storePassword("John", "Pass123", "Pass12345"));
